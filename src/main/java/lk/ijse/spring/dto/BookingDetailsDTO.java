@@ -16,17 +16,21 @@ import java.time.LocalTime;
 public class BookingDetailsDTO {
     private String bdid;
     private String uid;
+    private String userName;
+    private String userEmail;
+    private String userAccountNo;
     private String cid;
     private String did;
     private String pickUp;
     private String dropOff;
+    private String driverNeed;
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate pickUpDate;
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate dropOffDate;
-    @JsonFormat(pattern = "HH-mm-ss")
+    @JsonFormat(pattern = "hh:mm a")
     private LocalTime pickUpTime;
-    @JsonFormat(pattern = "HH-mm-ss")
+    @JsonFormat(pattern = "hh:mm a")
     private LocalTime dropOffTime;
     private double rentPrice;
 }

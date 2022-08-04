@@ -44,8 +44,8 @@ public class DriverController {
         return new ResponseUtil(200,"Deleted",null);
     }
 
-    @GetMapping(path = "/{did}",produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil searchDriver(@RequestParam String did) {
+    @GetMapping(path ="/{did}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil searchDriver(@PathVariable String did) {
         return new ResponseUtil(200,"Ok",driverService.searchDriver(did));
     }
 

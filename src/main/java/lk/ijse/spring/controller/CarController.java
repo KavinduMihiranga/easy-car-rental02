@@ -42,7 +42,7 @@ public class CarController {
     }
 
     @GetMapping(path = "/{cid}",produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil searchCar(@RequestParam String cid) {
+    public ResponseUtil searchCar(@PathVariable String cid) {
         return new ResponseUtil(200,"Ok",carService.searchCar(cid));
     }
 
